@@ -24,6 +24,9 @@ const userRouter=require("./routers/user.js")
 // connection to mongodb
 const dbUrl=process.env.ATLASDB
 
+app.get("/", (req, res) => {
+    res.redirect("/listing");
+});
 
 main()
     .then(()=>{
