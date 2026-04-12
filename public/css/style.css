@@ -112,10 +112,7 @@ body{
 
 /* show page */
 
-.show-img{
-    height: 30vh;
 
-}
 .btns{
     display: flex;
 
@@ -211,4 +208,11 @@ body{
 .filter.active {
     color: #fe424d !important;
     opacity: 1;
+}
+
+.f-info-socials a{
+    text-decoration: none;
+}
+a{
+    color: black;
 }
