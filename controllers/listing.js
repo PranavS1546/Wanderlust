@@ -1,24 +1,58 @@
 const Listing= require("../models/listing")
 
 
-module.exports.index=async (req,res)=>{
-    const alllisting=await Listing.find({})
-    res.render("listings/index.ejs",{alllisting})
-}
+
+module.exports.index = async (req, res) => {
+    let { search } = req.query; // Ensure this matches name="search" in navbar
+    let filter = {};
+
+    if (search) {
+        filter.$or = [
+            { location: { $regex: search, $options: "i" } },
+            { country: { $regex: search, $options: "i" } }
+        ];
+    }
+
+    const alllisting = await Listing.find(filter);
+
+    if (search && alllisting.length === 0) {
+        req.flash("error", "No listings match your search.");
+        return res.redirect("/listing");
+    }
+
+    res.render("listings/index.ejs", { 
+        alllisting,
+        category: "Trending",
+        search
+    });
+};
 
 
 module.exports.filterByCategory = async (req, res) => {
     let { category } = req.params;
-    
-    const alllisting = await Listing.find({ category: category });
-    
+    let { search } = req.query;
+
+    let filter = { category };
+
+    if (search) {
+        filter.$or = [
+            { location: { $regex: search, $options: "i" } },
+            { country: { $regex: search, $options: "i" } }
+        ];
+    }
+
+    const alllisting = await Listing.find(filter);
+
     if (alllisting.length === 0) {
-        req.flash("error", `No Result found for ${category}`);
+        req.flash("error", "No results found");
         return res.redirect("/listing");
     }
 
- 
-    res.render("listings/category.ejs", { alllisting, category }); 
+    res.render("listings/index.ejs", {   
+        alllisting,
+        category,
+        search
+    });
 }
 
 module.exports.renderNewForm=(req,res)=>{

@@ -11,9 +11,16 @@
         </div>
 
         <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search">
-          <input class="search form-control me-2" type="search" placeholder="Search" />
-          <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <form class="d-flex" role="search" action="/listing" method="GET">
+            <input 
+                name="search"  class="form-control me-2 search" 
+                type="search" 
+                placeholder="Search by location" 
+                value="<%= search %>"
+            >
+            <button class="btn btn-search" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </form>
       </div>
 

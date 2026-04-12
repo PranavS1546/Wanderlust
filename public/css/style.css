@@ -208,4 +208,7 @@ body{
     padding: 0.5rem 3rem 0.5rem 3rem;
     
 }
-
+.filter.active {
+    color: #fe424d !important;
+    opacity: 1;
+}

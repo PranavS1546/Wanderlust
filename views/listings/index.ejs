@@ -8,13 +8,12 @@
     <p>Trending</p>
   </a>
   </div>
-  <div class="filter">
-    <a href="/listing/category/Rooms" class="filter-link">
+  <div class="filter <%= (typeof category !== 'undefined' && category === 'Rooms') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link ">
    <div><i class="fa-solid fa-bed"></i></div> 
     <p>Rooms</p></a>
   </div>
   <div class="filter">
-    <a href="/listing/category/IconicCities" class="filter-link">
+    <a href="/listing/category/Iconic Cities" class="filter-link">
    <div><i class="fa-solid fa-city"></i></div> 
     <p>Iconic Cities</p>
   </a>
@@ -26,7 +25,7 @@
   </a>
   </div>
   <div class="filter">
-    <a href="/listing/category/castles" class="filter-link">
+    <a href="/listing/category/Castles" class="filter-link">
    <div><i class="fa-brands fa-fort-awesome"></i></div> 
     <p>castles</p>
   </a>

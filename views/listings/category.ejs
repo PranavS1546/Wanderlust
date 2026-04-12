@@ -7,51 +7,50 @@
     <p>Trending</p>
   </a>
   </div>
-  <div class="filter">
-    <a href="/listing/category/Rooms" class="filter-link">
+  <div class="filter <%= (typeof category !== 'undefined' && category === 'Rooms') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
    <div><i class="fa-solid fa-bed"></i></div> 
     <p>Rooms</p></a>
   </div>
-  <div class="filter">
-    <a href="/listing/category/IconicCities" class="filter-link">
+  <div class="filter <%= (typeof category !== 'undefined' && category === 'Iconic Cities') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
+    <a href="/listing/category/Iconic Cities" class="filter-link">
    <div><i class="fa-solid fa-city"></i></div> 
     <p>Iconic Cities</p>
   </a>
   </div>
-  <div class="filter">
+  <div class="filter <%= (typeof category !== 'undefined' && category === 'Mountains') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
     <a href="/listing/category/Mountains" class="filter-link">
    <div><i class="fa-solid fa-mountain"></i></div> 
     <p>Mountains</p>
   </a>
   </div>
-  <div class="filter">
-    <a href="/listing/category/castles" class="filter-link">
+  <div class="filter <%= (typeof category !== 'undefined' && category === 'Castles') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
+    <a href="/listing/category/Castles" class="filter-link">
    <div><i class="fa-brands fa-fort-awesome"></i></div> 
     <p>castles</p>
   </a>
   </div>
-  <div class="filter">
+  <div class="filter <%= (typeof category !== 'undefined' && category === 'Amazing Pools') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
     <a href="/listing/category/Amazing Pools" class="filter-link">
    <div><i class="fa-solid fa-person-swimming"></i></div> 
     <p>Amazing Pools</p>
   </a>
   </div>
-  <div class="filter">
+  <div class="filter <%= (typeof category !== 'undefined' && category === 'Camping') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
     <a href="/listing/category/Camping" class="filter-link">
     <div><i class="fa-solid fa-mountain"></i></div> 
      <p>Camping</p></a>
    </div>
-   <div class="filter">
+   <div class="filter <%= (typeof category !== 'undefined' && category === 'Farms') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
     <a href="/listing/category/Farms" class="filter-link">
     <div><i class="fa-solid fa-tractor"></i></div> 
      <p>Farms</p></a>
    </div>
-   <div class="filter">
+   <div class="filter <%= (typeof category !== 'undefined' && category === 'Arctic') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
     <a href="/listing/category/Arctic" class="filter-link">
     <div><i class="fa-solid fa-snowflake"></i></div> 
      <p>Arctic</p></a>
    </div>
-   <div class="filter">
+   <div class="filter <%= (typeof category !== 'undefined' && category === 'Beach') ? 'active' : '' %>">    <a href="/listing/category/Rooms" class="filter-link">
     <a href="/listing/category/Beach" class="filter-link">
     <div><i class="fa-solid fa-umbrella-beach"></i></div> 
      <p>Beach</p></a>

@@ -28,8 +28,17 @@ const listingSchema= new Schema({
     },
     category:{
         type:[String],
-        enum:["Rooms","IconicCitie","Mountains","Castles","Swimming Pool","Camping","Farms","Arctic","Beach"]
-    }
+        enum: [
+            "Rooms", 
+            "Iconic Cities", // Added the 's'
+            "Mountains", 
+            "Castles",       // Capitalized to match general convention
+            "Amazing Pools", // Changed from "Swimming Pool" to match your UI
+            "Camping", 
+            "Farms", 
+            "Arctic", 
+            "Beach"
+        ]    }
 })
 
 
